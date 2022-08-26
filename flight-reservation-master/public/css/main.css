@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("css-var.css");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+header .hero video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+header .hero #video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  /* opacity: 0.4; */
+}
+header .hero .headings > * {
+  margin-top: 1rem;
+}
+header .hero .headings {
+  position: absolute;
+  top: 35%;
+  left: 5rem;
+  background-color: var(--bg-white-color);
+  padding: 2rem;
+}
+header .hero .headings #title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: var(--primary-color);
+  /* margin: 10px 0; */
+}
+header .hero .headings a {
+  background-color: var(--primary-color);
+  color: var(--primary-color-light);
+  padding: 5px 10px;
+}
+/* dashboard  */
+.booking-form-header {
+  background-image: url("../plane.png") !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.booking-form-header > div:last-child {
+  height: 100%;
+}
+.booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form-1div {
+  background-color: var(--bg-white-color);
+  padding: 4rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#greeting {
+  left: 10rem;
+  top: 3rem;
+  position: absolute;
+  font-size: 1.3rem;
+}
+
+.correct-margin,
+.con-hist {
+  padding-left: 6rem;
+}
+
+/* User Profile */
+.prof {
+  position: relative;
+  margin-left: 8rem;
+  margin-top: 1rem;
+}
+.histGroup {
+  display: flex;
+  margin-top: 1rem;
+}
+.usr-prof-main {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  margin-top: 5rem;
+  margin-right: 5rem;
+}
+.usr-prof-main > div {
+  background-color: var(--primary-color-light);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.prof-pic {
+  padding: 10px;
+}
+.updt-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--popup-color);
+  transform: scale(0);
+  z-index: 150;
+}
+.updt-sec > div {
+  background-color: var(--sidebar-color);
+  padding: 3rem;
+  position: relative;
+}
+.updt-sec > div span:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.updt-sec > div span:first-child i {
+  color: red;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Booking */
+
+.flight {
+  background-color: var(--primary-color-light);
+  margin: 20px 1rem;
+  padding: 20px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flight .flight-name {
+  color: var(--primary-color);
+}
+.flight .flight-info {
+  padding-top: 10px;
+}
+.flight .flight-info span {
+  color: var(--text-color);
+  margin: 0 5px;
+}
+.booking-options {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.ops-btns {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+.booking-options input {
+  margin: 5px !important;
+  padding: 5px;
+}
+
+.bookin-sec > div {
+  width: 60% !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-inps {
+  transform: translateX(200%);
+  display: none;
+}
+.third-inps {
+  transform: translateX(200%);
+  display: none;
+}
+.fourth-inps {
+  transform: translateX(200%);
+  display: none;
+}
+
+.fourth-inps > div {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fourth-inps > div > .numpas,
+.confirm-btns {
+  display: flex;
+  gap: 2rem;
+}
+.confirm-btns input {
+  width: 200px !important;
+  padding: 5px 10px;
+}
+#flight-filter {
+  margin: 1rem 2rem;
+}
+#flight-filter > * {
+  display: inline;
+  margin: 0 2rem;
+}
+.booking-options > input[type="button"],
+.booking-options > input[type="submit"] {
+  width: min-content;
+  padding: 5px 10px;
+}
+.booking-options > input[type="submit"] {
+  width: 100px;
+}
+#emt {
+  color: var(--alert-color);
+  font-size: 1.4rem;
+  text-align: center;
+}
+.success {
+  color: var(--success-color);
+  font-weight: 700;
+}
+.failure {
+  color: var(--alert-color);
+  font-weight: 700;
+}
+.dur-time .dot {
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block;
+
+  border-radius: 50%;
+}
+.dur-time {
+  color: var(--alert-color) !important;
+}
+#cnl,
+#prv {
+  background-color: var(--alert-color);
+}
+#cur {
+  background-color: var(--primary-color);
+}
+#cur ~ span {
+  color: var(--primary-color) !important;
+}
+#nxt {
+  background-color: var(--success-color);
+}
+#nxt ~ span {
+  color: var(--success-color) !important;
+}
+#prv ~ span {
+  color: var(--alert-color) !important;
+}

@@ -1,0 +1,53 @@
+<%- include ('../partials/headers.ejs') %>
+
+    <body>
+        <%- include ('../partials/dashboardNav.ejs') %>
+            <div class="con-hist">
+                <h2 id="sub-ttl">Saved Bookings</h2>
+                <div class="flights-details">
+                    <% if (length> 0) { %>
+                        <% for( let index=0; index < length; index++ ) { %>
+                            <form action="/cancel" method="post">
+                                <div class="flight">
+                                    <div>
+                                        <h2 class="flight-name"><span class="index">
+                                                <%= index+1 %>.
+                                            </span>
+                                            <%= history[index].flightName %>
+                                        </h2>
+                                        <div class="flight-info">
+                                            <span class="tkt-num">
+                                                <input name="ticketNum" readonly
+                                                    value="<%= history[index].ticketnum %>">
+
+                                            </span>
+                                            <span class="code">
+                                                Code: <%= history[index].flightCode %>
+                                            </span>
+                                            <span class="code">
+                                                Date: <%= history[index].deptDate %>
+                                            </span>
+                                            <span class="dept-time">
+                                                Departure: <%= history[index].deptTime%>
+                                            </span>
+
+                                            <span class="arr-time">
+                                                Arrival: <%= history[index].arrTime %>
+                                            </span>
+                                            <!-- <span class="dur-time">flights[index].Duration</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="booking-options">
+                                        <input type="submit" formaction="/paySaved" value="Pay">
+                                        <input type="submit" formaction="/rmSaved" id="alert" value="Remove">
+                                    </div>
+                                </div>
+                            </form>
+                            <% } %>
+
+                                <% } else {%>
+                                    <p id="emt">Empty</p>
+                                    <% } %>
+                </div>
+            </div>
+    </body>

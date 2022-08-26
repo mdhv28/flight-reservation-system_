@@ -1,0 +1,66 @@
+<%- include ('../partials/headers.ejs') %>
+
+    <body>
+        <%- include ('../partials/dashboardNav.ejs') %>
+            <header class="booking-form-header">
+                <div id="greeting">
+                    <h2>Hii <%= name %>
+                    </h2>
+                    <% if (alrUsr) { %>
+                        <script>
+                            alert("Less number of seats are avilable");
+                        </script>
+                        <% } %>
+                </div>
+                <div>
+                    <form action="/fetchFlights" class="booking-form" method="POST" autocomplete="off">
+                        <div class="form-1div">
+                            <div class="group">
+                                <input type="text" name="from" list="flight-code" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>FROM</label>
+                                <datalist id="flight-code">
+                                    <option value="AMD">AMD (Ahmedabad)</option>
+                                    <option value="BLR">BLR (Bangalore)</option>
+                                    <option value="CCU">CCU (Kolkata)</option>
+                                    <option value="MAA">MAA (Chennai)</option>
+                                    <option value="DEL">DEL (Delhi)</option>
+                                    <option value="HYD">HYD (Hyderabad)</option>
+                                    <option value="BOM">BOM (Mumbai)</option>
+                                    <option value="PUT">PUT (Prokerala)</option>
+                                    <option value="VNS">VNS (Varanasi)</option>
+                                </datalist>
+                            </div>
+                            <div class="group">
+                                <input type="text" list="flight-code" name="to" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>TO</label>
+                                <datalist id="flight-code">
+                                    <option value="AMD">AMD (Ahmedabad)</option>
+                                    <option value="BLR">BLR (Bangalore)</option>
+                                    <option value="CCU">CCU (Kolkata)</option>
+                                    <option value="MAA">MAA (Chennai)</option>
+                                    <option value="DEL">DEL (Delhi)</option>
+                                    <option value="HYD">HYD (Hyderabad)</option>
+                                    <option value="BOM">BOM (Mumbai)</option>
+                                    <option value="PUT">PUT (Prokerala)</option>
+                                    <option value="VNS">VNS (Varanasi)</option>
+                                </datalist>
+                            </div>
+                            <div class="group">
+                                <input type="DATE" id="date" name="date" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>DATE</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" value="Get flights" required>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </header>
+    </body>
